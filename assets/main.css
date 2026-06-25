@@ -1205,6 +1205,8 @@ body.menu-open {
     color: #0d4c17;
 }
 
+
+
 /* ====== FACEBOOK POST STYLE ====== */
 .facebook-post {
     background: white;
@@ -1246,54 +1248,406 @@ body.menu-open {
     color: #6b7280;
     font-size: 14px;
 }
-
-/* ====== FOOTER STYLES ====== */
-footer {
-    background: linear-gradient(135deg, #0d4c17 0%, #166534 100%);
+/* ====== FOOTER ====== */
+.site-footer {
+    background: linear-gradient(160deg, #052e0f 0%, #0a3d18 40%, #0d4c1f 100%);
     color: white;
     position: relative;
-    overflow: hidden;
+    margin-top: 0;
 }
 
-.footer-wave {
-    position: absolute;
-    top: 0;
-    left: 0;
+.footer-wave-top {
+    line-height: 0;
+    margin-bottom: -2px;
+}
+
+.footer-wave-top svg {
     width: 100%;
-    height: 100px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'/%3E%3C/svg%3E");
-    background-size: 1200px 100px;
-    transform: rotate(180deg);
+    height: 50px;
+    display: block;
 }
 
-.footer-content {
-    position: relative;
-    z-index: 1;
+.footer-body {
+    padding: 60px 0 0;
+}
+
+/* ====== MAIN GRID ====== */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ====== BRAND COL ====== */
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-logo {
+    height: 60px;
+    width: 60px;
+    background: white;
+    padding: 6px;
+    border-radius: 12px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.footer-school-name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: white;
+}
+
+.footer-estd {
+    font-size: 12px;
+    color: #86efac;
+    display: block;
+    margin-top: 3px;
+}
+
+.footer-about {
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.footer-badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.footer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.25);
+    color: #86efac;
+    font-size: 11.5px;
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.social-btn.fb { background: rgba(24,119,242,0.2); border: 1px solid rgba(24,119,242,0.3); }
+.social-btn.yt { background: rgba(239,68,68,0.2);  border: 1px solid rgba(239,68,68,0.3); }
+.social-btn.tw { background: rgba(29,161,242,0.2); border: 1px solid rgba(29,161,242,0.3); }
+
+.social-btn.fb:hover { background: #1877f2; border-color: #1877f2; transform: translateY(-2px); }
+.social-btn.yt:hover { background: #ef4444; border-color: #ef4444; transform: translateY(-2px); }
+.social-btn.tw:hover { background: #1da1f2; border-color: #1da1f2; transform: translateY(-2px); }
+
+/* ====== COLUMN TITLE ====== */
+.footer-col-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-col-title-bar {
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background: linear-gradient(to bottom, #22c55e, #f59e0b);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* ====== LINKS ====== */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-links a {
-    position: relative;
-    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.58);
+    text-decoration: none;
+    transition: all 0.22s ease;
+    padding: 2px 0;
 }
 
-.footer-links a::before {
-    content: '›';
-    position: absolute;
-    left: -15px;
-    opacity: 0;
-    transition: all 0.3s ease;
+.footer-links a i {
+    font-size: 11px;
+    color: #22c55e;
+    flex-shrink: 0;
+    transition: transform 0.22s ease;
 }
 
 .footer-links a:hover {
-    color: #f59e0b;
-    transform: translateX(5px);
+    color: white;
+    transform: translateX(4px);
 }
 
-.footer-links a:hover::before {
-    opacity: 1;
-    left: -10px;
+.footer-links a:hover i {
+    transform: translateX(2px);
 }
 
+/* ====== CONTACT ====== */
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.contact-icon-wrap {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #4ade80;
+    font-size: 13px;
+    margin-top: 1px;
+}
+
+.contact-label {
+    font-size: 11px;
+    color: #4ade80;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.contact-val {
+    font-size: 13px;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.55;
+    display: block;
+}
+
+.contact-link {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+    color: white;
+}
+
+/* ====== GOV LINKS SECTION ====== */
+.footer-gov-section {
+    padding: 36px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-gov-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fbbf24;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-gov-title i {
+    color: #22c55e;
+}
+
+.footer-gov-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.footer-gov-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-decoration: none;
+    color: rgba(255,255,255,0.65);
+    font-size: 12px;
+    text-align: center;
+    transition: all 0.25s ease;
+    line-height: 1.4;
+}
+
+.gov-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(34,197,94,0.12);
+    border: 1px solid rgba(34,197,94,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #4ade80;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.footer-gov-card:hover {
+    background: rgba(34,197,94,0.1);
+    border-color: rgba(34,197,94,0.3);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-gov-card:hover .gov-card-icon {
+    background: rgba(34,197,94,0.22);
+    color: #86efac;
+}
+
+/* ====== COPYRIGHT ====== */
+.footer-copyright {
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-copyright p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+}
+
+.footer-copyright-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-copyright-links a {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-copyright-links a:hover {
+    color: #4ade80;
+}
+
+.footer-copyright-links span {
+    color: rgba(255,255,255,0.2);
+    font-size: 11px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .footer-gov-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-body {
+        padding: 40px 0 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 32px;
+    }
+
+    .footer-gov-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-copyright-links {
+        justify-content: center;
+    }
+
+    .footer-school-name {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-gov-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .footer-gov-card {
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    .gov-card-icon {
+        width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .footer-logo {
+        height: 48px;
+        width: 48px;
+    }
+}
 /* ====== NEW STYLES FROM OLD PAGE ====== */
 .floating-card {
     animation: float 6s ease-in-out infinite;

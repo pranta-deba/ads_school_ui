@@ -402,12 +402,14 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ====== CURRENT YEAR UPDATE ======
-const currentYear = new Date().getFullYear();
-const currentYearElement = document.querySelector('footer .text-gray-500');
-if (currentYearElement) {
-    currentYearElement.textContent = `© ${currentYear} পাহাড়তলী গার্লস স্কুল এন্ড কলেজ। সর্বস্বত্ব সংরক্ষিত।`;
+// ====== FOOTER YEAR ======
+const footerYear = document.getElementById('footerYear');
+if (footerYear) {
+    const bengaliNums = {'0':'০','1':'১','2':'২','3':'৩','4':'৪','5':'৫','6':'৬','7':'৭','8':'৮','9':'৯'};
+    const year = new Date().getFullYear().toString();
+    footerYear.textContent = year.split('').map(d => bengaliNums[d]).join('');
 }
+
 
 // ====== VIDEO PLAY FUNCTIONALITY ======
 const videoItems = document.querySelectorAll('.video-item');

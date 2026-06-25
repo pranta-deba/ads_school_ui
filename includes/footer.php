@@ -1,167 +1,191 @@
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-    <div class="container mx-auto px-4 md:px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <!-- School Info -->
-            <div>
-                <div class="flex items-center gap-4 mb-8">
-                    <img src="https://pgsc.edu.bd/images/schoollogo.png" class="h-16 bg-white p-2 rounded-xl"
-                        alt="Logo">
-                    <div>
-                        <h3 class="text-xl font-bold solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড কলেজ</h3>
-                        <p class="text-sm text-gray-400 mt-1 solaiman-font">স্থাপিত: ১৯৫০</p>
+<footer class="site-footer">
+
+    <!-- Top Wave -->
+    <div class="footer-wave-top">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="#f8fafc"/>
+        </svg>
+    </div>
+
+    <div class="footer-body">
+        <div class="container mx-auto px-4 md:px-6">
+
+            <!-- Main Grid -->
+            <div class="footer-grid">
+
+                <!-- Col 1: School Info -->
+                <div class="footer-col footer-brand">
+                    <div class="footer-logo-wrap">
+                        <img src="https://pgsc.edu.bd/image/schoollogo.png" alt="PGSC Logo" class="footer-logo">
+                        <div>
+                            <h3 class="footer-school-name solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড কলেজ</h3>
+                            <span class="footer-estd solaiman-font">স্থাপিত: ১৯৫০</span>
+                        </div>
+                    </div>
+                    <p class="footer-about solaiman-font">
+                        নারী শিক্ষা বিস্তারে অগ্রণী ভূমিকা পালনকারী একটি ঐতিহ্যবাহী শিক্ষাপ্রতিষ্ঠান। আমরা শিক্ষার্থীদের সুনাগরিক হিসেবে গড়ে তুলতে প্রতিশ্রুতিবদ্ধ।
+                    </p>
+                    <!-- Accreditation Badge -->
+                    <div class="footer-badge-row">
+                        <span class="footer-badge solaiman-font">
+                            <i class="fas fa-certificate"></i> স্বীকৃত প্রতিষ্ঠান
+                        </span>
+                        <span class="footer-badge solaiman-font">
+                            <i class="fas fa-id-card"></i> EIIN: ১০৪৬৭৫
+                        </span>
+                    </div>
+                    <!-- Social -->
+                    <div class="footer-social">
+                        <a href="https://facebook.com/pgsc.edu.bd" target="_blank" class="social-btn fb" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-btn yt" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-btn tw" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </div>
                 </div>
-                <p class="text-gray-400 leading-relaxed mb-6 solaiman-font">
-                    নারী শিক্ষা বিস্তারে অগ্রণী ভূমিকা পালনকারী একটি ঐতিহ্যবাহী শিক্ষাপ্রতিষ্ঠান। আমরা শিক্ষার্থীদের
-                    সুনাগরিক হিসেবে গড়ে তুলতে প্রতিশ্রুতিবদ্ধ।
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title solaiman-font">
+                        <span class="footer-col-title-bar"></span>
+                        দ্রুত লিংক
+                    </h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-chevron-right"></i> অনলাইন ভর্তি</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-chevron-right"></i> একাডেমিক ক্যালেন্ডার</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-chevron-right"></i> শিক্ষকবৃন্দ</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-chevron-right"></i> কর্মচারী তথ্য</a></li>
+                        <li><a href="#notice" class="solaiman-font"><i class="fas fa-chevron-right"></i> নোটিশ বোর্ড</a></li>
+                        <li><a href="#results" class="solaiman-font"><i class="fas fa-chevron-right"></i> পরীক্ষার ফলাফল</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Academic -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title solaiman-font">
+                        <span class="footer-col-title-bar"></span>
+                        একাডেমিক
+                    </h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-book"></i> শ্রেণি রুটিন</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-file-alt"></i> পরীক্ষার সিলেবাস</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-calendar-alt"></i> ইভেন্ট ক্যালেন্ডার</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-trophy"></i> অর্জনসমূহ</a></li>
+                        <li><a href="#" class="solaiman-font"><i class="fas fa-graduation-cap"></i> বৃত্তি তথ্য</a></li>
+                        <li><a href="#gallery" class="solaiman-font"><i class="fas fa-images"></i> ফটো গ্যালারি</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title solaiman-font">
+                        <span class="footer-col-title-bar"></span>
+                        যোগাযোগ
+                    </h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label solaiman-font">ঠিকানা</p>
+                                <p class="contact-val solaiman-font">শহীদ লেন, পাহাড়তলী<br>আকবরশাহ, চট্টগ্রাম-৪২০২</p>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label solaiman-font">ফোন</p>
+                                <a href="tel:+8801819070585" class="contact-val contact-link solaiman-font">+৮৮০১৮১৯০৭০৫৮৫</a>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label solaiman-font">ইমেইল</p>
+                                <a href="mailto:pgsc1950@gmail.com" class="contact-val contact-link solaiman-font">pgsc1950@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="footer-contact-item">
+                            <div class="contact-icon-wrap">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label solaiman-font">অফিস সময়</p>
+                                <p class="contact-val solaiman-font">শনি–বৃহস্পতি: সকাল ৮টা – বিকেল ৪টা</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Government Links -->
+            <div class="footer-gov-section">
+                <h4 class="footer-gov-title solaiman-font">
+                    <i class="fas fa-link"></i> সরকারি ওয়েবসাইট লিংক
+                </h4>
+                <div class="footer-gov-grid">
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <span class="solaiman-font">শিক্ষা মন্ত্রণালয়</span>
+                    </a>
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <span class="solaiman-font">চট্টগ্রাম শিক্ষা বোর্ড</span>
+                    </a>
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span class="solaiman-font">মাধ্যমিক শিক্ষা অধিদপ্তর</span>
+                    </a>
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <span class="solaiman-font">শিক্ষক বাতায়ন</span>
+                    </a>
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <span class="solaiman-font">বাংলাদেশ সরকার</span>
+                    </a>
+                    <a href="#" class="footer-gov-card" target="_blank">
+                        <div class="gov-card-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <span class="solaiman-font">জাতীয় শিক্ষাক্রম</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="footer-copyright">
+                <p class="solaiman-font">
+                    &copy; <span id="footerYear">২০২৬</span> পাহাড়তলী গার্লস স্কুল এন্ড কলেজ। সর্বস্বত্ব সংরক্ষিত।
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-gray-800 hover:bg-green-600 p-3 rounded-full transition duration-300">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition duration-300">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="#" class="bg-gray-800 hover:bg-blue-400 p-3 rounded-full transition duration-300">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                <div class="footer-copyright-links">
+                    <a href="#" class="solaiman-font">গোপনীয়তা নীতি</a>
+                    <span>·</span>
+                    <a href="#" class="solaiman-font">ব্যবহারের শর্ত</a>
+                    <span>·</span>
+                    <a href="#" class="solaiman-font">সাইট ম্যাপ</a>
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 class="text-xl font-bold mb-8 text-yellow-300 solaiman-font">দ্রুত লিংক</h4>
-                <ul class="space-y-4">
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-chevron-right text-green-500"></i>
-                            <span class="solaiman-font">অনলাইন ভর্তি</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-chevron-right text-green-500"></i>
-                            <span class="solaiman-font">একাডেমিক ক্যালেন্ডার</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-chevron-right text-green-500"></i>
-                            <span class="solaiman-font">শিক্ষকবৃন্দ</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-chevron-right text-green-500"></i>
-                            <span class="solaiman-font">কর্মচারী তথ্য</span>
-                        </a></li>
-                </ul>
-            </div>
-
-            <!-- Academic Links -->
-            <div>
-                <h4 class="text-xl font-bold mb-8 text-yellow-300 solaiman-font">একাডেমিক</h4>
-                <ul class="space-y-4">
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-book text-green-500"></i>
-                            <span class="solaiman-font">শ্রেণি রুটিন</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-file-alt text-green-500"></i>
-                            <span class="solaiman-font">পরীক্ষার সিলেবাস</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-calendar-alt text-green-500"></i>
-                            <span class="solaiman-font">ইভেন্ট ক্যালেন্ডার</span>
-                        </a></li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition duration-300 flex items-center gap-3">
-                            <i class="fas fa-trophy text-green-500"></i>
-                            <span class="solaiman-font">অর্জনসমূহ</span>
-                        </a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div>
-                <h4 class="text-xl font-bold mb-8 text-yellow-300 solaiman-font">যোগাযোগ</h4>
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-map-marker-alt text-green-400 mt-1"></i>
-                        <div>
-                            <h5 class="font-semibold solaiman-font">ঠিকানা</h5>
-                            <p class="text-gray-400 text-sm mt-1 solaiman-font">
-                                শহীদ লেন, পাহাড়তলী<br>
-                                আকবরশাহ, চট্টগ্রাম-৪২০২<br>
-                                বাংলাদেশ
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-phone-alt text-green-400 mt-1"></i>
-                        <div>
-                            <h5 class="font-semibold solaiman-font">ফোন</h5>
-                            <p class="text-gray-400 text-sm mt-1 solaiman-font">
-                                +৮৮০১৮১৯০৭০৫৮৫<br>
-                                +৮৮০২২-৭৭৪৫৬
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <i class="fas fa-envelope text-green-400 mt-1"></i>
-                        <div>
-                            <h5 class="font-semibold solaiman-font">ইমেইল</h5>
-                            <p class="text-gray-400 text-sm mt-1 solaiman-font">
-                                pgsc1950@gmail.com<br>
-                                info@pgsc.edu.bd
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Government Links -->
-        <div class="bg-gray-800 rounded-2xl p-6 mb-12">
-            <h4 class="text-lg font-bold mb-6 text-center text-yellow-300 solaiman-font">সরকারি ওয়েবসাইট লিংক</h4>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="#" class="bg-gray-700 hover:bg-gray-600 p-4 rounded-xl text-center transition duration-300">
-                    <i class="fas fa-university text-green-400 text-xl mb-2"></i>
-                    <div class="text-sm solaiman-font">শিক্ষা মন্ত্রণালয়</div>
-                </a>
-                <a href="#" class="bg-gray-700 hover:bg-gray-600 p-4 rounded-xl text-center transition duration-300">
-                    <i class="fas fa-school text-green-400 text-xl mb-2"></i>
-                    <div class="text-sm solaiman-font">চট্টগ্রাম শিক্ষা বোর্ড</div>
-                </a>
-                <a href="#" class="bg-gray-700 hover:bg-gray-600 p-4 rounded-xl text-center transition duration-300">
-                    <i class="fas fa-globe text-green-400 text-xl mb-2"></i>
-                    <div class="text-sm solaiman-font">মাধ্যমিক শিক্ষা অধিদপ্তর</div>
-                </a>
-                <a href="#" class="bg-gray-700 hover:bg-gray-600 p-4 rounded-xl text-center transition duration-300">
-                    <i class="fas fa-desktop text-green-400 text-xl mb-2"></i>
-                    <div class="text-sm solaiman-font">শিক্ষক বাতায়ন</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="pt-8 border-t border-gray-800">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="text-center md:text-left mb-4 md:mb-0">
-                    <p class="text-gray-500 text-sm solaiman-font">
-                        &copy; ২০২৬ পাহাড়তলী গার্লস স্কুল এন্ড কলেজ। সর্বস্বত্ব সংরক্ষিত।
-                    </p>
-                    <p class="text-gray-600 text-xs mt-2 solaiman-font">
-                        এই ওয়েবসাইটটি স্কুল কর্তৃপক্ষ দ্বারা পরিচালিত
-                    </p>
-                </div>
-                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500">
-                    <a href="#" class="hover:text-white transition solaiman-font">গোপনীয়তা নীতি</a>
-                    <a href="#" class="hover:text-white transition solaiman-font">ব্যবহারের শর্তাবলী</a>
-                    <a href="#" class="hover:text-white transition solaiman-font">সাইট ম্যাপ</a>
-                    <a href="#" class="hover:text-white transition solaiman-font">সহায়তা</a>
-                </div>
-            </div>
         </div>
     </div>
 </footer>
