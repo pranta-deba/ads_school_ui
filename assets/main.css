@@ -1379,6 +1379,509 @@ body.menu-open {
     }
 }
 
+
+/* ====== ADMINISTRATION SECTION ====== */
+
+.adm-section {
+    padding: 80px 0;
+}
+
+.adm-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* --- Section Header --- */
+.adm-section-head {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.adm-sec-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #166534;
+    font-size: 12px;
+    padding: 5px 14px;
+    border-radius: 50px;
+    margin-bottom: 14px;
+}
+
+.adm-sec-title {
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 700;
+    color: #0d4c17;
+    margin-bottom: 10px;
+}
+
+.adm-sec-sub {
+    font-size: 14px;
+    color: #6b7280;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.65;
+}
+
+/* --- Shared Sub-Title --- */
+.adm-sub-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.adm-title-bar {
+    display: inline-block;
+    width: 3px;
+    height: 18px;
+    background: #0d4c17;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* --- President & Principal Grid --- */
+.adm-msg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 36px;
+}
+
+/* Message Cards */
+.adm-msg-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 26px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+
+.adm-msg-card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+
+.adm-msg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 16px 16px 0 0;
+}
+
+.adm-msg-president::before { background: #0d4c17; }
+.adm-msg-principal::before { background: #1d4ed8; }
+
+.adm-msg-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+/* Photo */
+.adm-photo-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.adm-photo {
+    width: 86px;
+    height: 86px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid #e5e7eb;
+    background: #f3f4f6;
+}
+
+.adm-photo-badge {
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 50px;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+}
+
+.adm-badge-green { background: #0d4c17; }
+.adm-badge-blue  { background: #1d4ed8; }
+
+/* Meta */
+.adm-meta { padding-top: 4px; }
+
+.adm-msg-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.adm-person-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.adm-name-green { color: #0d4c17; }
+.adm-name-blue  { color: #1d4ed8; }
+
+.adm-person-role {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Quote */
+.adm-quote {
+    font-size: 13.5px;
+    line-height: 1.72;
+    color: #374151;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 0 10px 10px 0;
+    border-left: 3px solid transparent;
+}
+
+.adm-quote-green {
+    background: #f0fdf4;
+    border-left-color: #0d4c17;
+}
+
+.adm-quote-blue {
+    background: #eff6ff;
+    border-left-color: #1d4ed8;
+}
+
+/* --- Vision & Mission Grid --- */
+.adm-vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.adm-vm-card {
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid transparent;
+}
+
+.adm-vm-mission {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+}
+
+.adm-vm-vision {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+}
+
+.adm-vm-head {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 16px;
+}
+
+.adm-vm-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.adm-vm-icon-green { background: #0d4c17; }
+.adm-vm-icon-blue  { background: #1d4ed8; }
+
+.adm-vm-heading {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.adm-vm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.adm-vm-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 13.5px;
+    color: #374151;
+    line-height: 1.5;
+}
+
+.adm-vm-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.adm-dot-green { background: #0d4c17; }
+
+.adm-vm-text {
+    font-size: 13.5px;
+    color: #374151;
+    line-height: 1.72;
+}
+
+/* --- Governing Body --- */
+.adm-gb-wrap {
+    margin-bottom: 40px;
+}
+
+.adm-table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.adm-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    min-width: 480px;
+}
+
+.adm-table thead tr {
+    background: #0d4c17;
+}
+
+.adm-table th {
+    padding: 13px 16px;
+    text-align: left;
+    color: #ffffff;
+    font-weight: 600;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.adm-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid #f3f4f6;
+    color: #374151;
+    vertical-align: middle;
+}
+
+.adm-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.adm-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.adm-table tbody tr:hover {
+    background: #f0fdf4;
+}
+
+/* Role Badges */
+.adm-role-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.adm-rb-president { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+.adm-rb-secretary { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+.adm-rb-teacher   { background: #faf5ff; border-color: #e9d5ff; color: #6b21a8; }
+.adm-rb-finance   { background: #fff7ed; border-color: #fed7aa; color: #9a3412; }
+.adm-rb-parent    { background: #fef2f2; border-color: #fecaca; color: #991b1b; }
+
+.adm-phone {
+    font-size: 12px;
+    color: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.adm-phone i { font-size: 11px; }
+
+/* --- Teachers & Staff Grid --- */
+.adm-person-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.adm-person-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.adm-person-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.adm-person-item:hover {
+    border-color: #0d4c17;
+    background: #fafffe;
+    transform: translateX(2px);
+}
+
+.adm-person-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.adm-pa-green  { background: #f0fdf4; color: #16a34a; }
+.adm-pa-blue   { background: #eff6ff; color: #2563eb; }
+.adm-pa-orange { background: #fff7ed; color: #ea580c; }
+.adm-pa-purple { background: #faf5ff; color: #7c3aed; }
+.adm-pa-red    { background: #fef2f2; color: #dc2626; }
+.adm-pa-yellow { background: #fefce8; color: #ca8a04; }
+
+.adm-person-name2 {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 3px;
+}
+
+.adm-person-pos {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.adm-person-exp {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+/* More Link */
+.adm-more-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #0d4c17;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: gap 0.2s ease;
+}
+
+.adm-more-link:hover {
+    gap: 11px;
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+    .adm-section {
+        padding: 60px 0;
+    }
+}
+
+/* Tablet portrait */
+@media (max-width: 860px) {
+    .adm-msg-grid,
+    .adm-vm-grid,
+    .adm-person-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adm-person-grid {
+        gap: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .adm-section {
+        padding: 40px 0;
+    }
+
+    .adm-section-head {
+        margin-bottom: 32px;
+    }
+
+    .adm-msg-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .adm-msg-card {
+        padding: 20px 16px;
+    }
+
+    .adm-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .adm-meta {
+        padding-top: 0;
+    }
+
+    .adm-quote {
+        font-size: 13px;
+    }
+
+    .adm-table th,
+    .adm-table td {
+        padding: 10px 12px;
+        font-size: 12.5px;
+    }
+
+    .adm-vm-card {
+        padding: 18px 16px;
+    }
+}
+
+
 /* ====== JS BACKGROUND EFFECTS ====== */
 .particles-container {
     position: fixed;
