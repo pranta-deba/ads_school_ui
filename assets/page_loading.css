@@ -1,0 +1,274 @@
+/* ====== MINI LOADING – CLEAN & MODERN ====== */
+#loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0d4c17, #22c55e, #f59e0b);
+  z-index: 9999;
+  transition: width 0.3s ease;
+  box-shadow: 0 1px 8px rgba(13, 76, 23, 0.25);
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+  transition: opacity 0.5s ease;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* স্পিনার – ছোট ও মার্জিত */
+.spinner {
+  width: 70px;
+  height: 70px;
+  border: 5px solid rgba(13, 76, 23, 0.12);
+  border-top: 5px solid #0d4c17;
+  border-right: 5px solid #22c55e;
+  border-bottom: 5px solid #f59e0b;
+  border-radius: 50%;
+  animation: spin 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(13, 76, 23, 0.08);
+}
+
+.spinner::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid rgba(13, 76, 23, 0.06);
+  border-radius: 50%;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+.spinner::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse-ring {
+  0%   { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* পার্সেন্টেজ – স্পিনারের ভেতরে ছোট */
+.loading-percentage {
+  position: absolute;
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+  color: #0d4c17;
+  font-family: 'SolaimanLipi', sans-serif;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.85);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: percentagePulse 2.4s infinite ease-in-out;
+  box-shadow: 0 6px 18px rgba(13, 76, 23, 0.10), inset 0 0 12px rgba(255,255,255,0.6);
+  border: 2px solid rgba(13, 76, 23, 0.08);
+  transition: all 0.2s;
+}
+
+@keyframes percentagePulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%      { transform: translate(-50%, -50%) scale(1.06); color: #166534; }
+}
+
+/* টেক্সট অংশ – সংক্ষিপ্ত */
+.loading-text {
+  margin-top: 90px;
+  text-align: center;
+  font-family: 'SolaimanLipi', sans-serif;
+  max-width: 88%;
+}
+
+.loading-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d4c17;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+  animation: textGlow 3s infinite alternate;
+  text-shadow: 0 1px 8px rgba(13, 76, 23, 0.10);
+}
+
+.loading-subtitle {
+  font-size: 13px;
+  color: #166534;
+  opacity: 0.75;
+  margin-bottom: 10px;
+  animation: fadeInOut 3.5s infinite;
+}
+
+.loading-resource {
+  font-size: 12px;
+  color: #4b5563;
+  min-height: 20px;
+  font-family: 'Hind Siliguri', sans-serif;
+  background: rgba(13, 76, 23, 0.04);
+  padding: 4px 14px;
+  border-radius: 30px;
+  border: 1px solid rgba(13, 76, 23, 0.06);
+  display: inline-block;
+  transition: all 0.3s;
+  animation: slideUp 4s infinite;
+}
+
+.progress-stage {
+  font-size: 10px;
+  color: #166534;
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  font-family: 'Hind Siliguri', sans-serif;
+  opacity: 0.6;
+  animation: stageFade 2.8s infinite;
+}
+
+/* ডটস – ছোট ও কম গ্যাপ */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.loading-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0d4c17;
+  animation: dotBounce 1.6s infinite ease-in-out;
+  box-shadow: 0 2px 6px rgba(13, 76, 23, 0.15);
+}
+.loading-dot:nth-child(1) { animation-delay: 0s;   background: #0d4c17; }
+.loading-dot:nth-child(2) { animation-delay: 0.15s; background: #166534; }
+.loading-dot:nth-child(3) { animation-delay: 0.30s; background: #22c55e; }
+.loading-dot:nth-child(4) { animation-delay: 0.45s; background: #f59e0b; }
+
+@keyframes dotBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(-10px); opacity: 1; }
+}
+
+/* অ্যানিমেশনগুলো */
+@keyframes textGlow {
+  0%, 100% { text-shadow: 0 1px 8px rgba(13,76,23,0.10); transform: scale(1); }
+  50%      { text-shadow: 0 4px 20px rgba(13,76,23,0.20); transform: scale(1.01); color: #166534; }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50%      { transform: translateY(-3px); opacity: 1; }
+}
+
+@keyframes stageFade {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+
+.loading-bg-effect {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 40%, rgba(13,76,23,0.02) 0%, transparent 70%);
+  z-index: -1;
+  animation: bgMove 20s infinite alternate ease-in-out;
+}
+
+@keyframes bgMove {
+  0%   { transform: translateX(0) translateY(0) scale(1); }
+  100% { transform: translateX(60px) translateY(30px) scale(1.1); }
+}
+
+/* ====== রেসপন্সিভ ====== */
+@media (max-width: 640px) {
+  .spinner { width: 60px; height: 60px; border-width: 4px; }
+  .loading-percentage { font-size: 17px; width: 48px; height: 48px; }
+  .loading-title { font-size: 18px; }
+  .loading-subtitle { font-size: 12px; }
+  .loading-resource { font-size: 11px; padding: 3px 12px; }
+  .loading-dot { width: 8px; height: 8px; gap: 6px; }
+  .loading-text { margin-top: 70px; }
+  .progress-stage { font-size: 9px; }
+}
+
+@media (max-width: 400px) {
+  .spinner { width: 50px; height: 50px; border-width: 3px; }
+  .loading-percentage { font-size: 14px; width: 40px; height: 40px; }
+  .loading-title { font-size: 15px; }
+  .loading-subtitle { font-size: 11px; }
+  .loading-resource { font-size: 10px; padding: 2px 10px; }
+  .loading-dot { width: 7px; height: 7px; }
+  .loading-text { margin-top: 55px; }
+}
+
+/* ডার্ক মোড */
+@media (prefers-color-scheme: dark) {
+  .loading-spinner {
+    background: rgba(15, 23, 42, 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .loading-percentage {
+    background: rgba(30, 41, 59, 0.9);
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.15);
+  }
+  .loading-title { color: #22c55e; }
+  .loading-subtitle { color: #86efac; }
+  .loading-resource { color: #cbd5e1; background: rgba(34,197,94,0.06); border-color: rgba(34,197,94,0.08); }
+  .progress-stage { color: #86efac; }
+  .spinner { border-color: rgba(34,197,94,0.15); border-top-color: #22c55e; border-right-color: #86efac; border-bottom-color: #f59e0b; }
+  .loading-dot { background: #22c55e; box-shadow: 0 2px 6px rgba(34,197,94,0.2); }
+}
+
+.loading-complete {
+  animation: completePulse 0.5s ease-out forwards;
+}
+
+@keyframes completePulse {
+  0%   { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50%  { transform: translate(-50%, -50%) scale(1.15); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
