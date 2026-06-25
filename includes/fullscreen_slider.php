@@ -1,82 +1,118 @@
 <section id="home" class="fullscreen-slider">
-    <!-- Image Modal -->
-    <div class="image-modal" id="imageModal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeModal">
-                <i class="fas fa-times"></i>
-            </span>
-            <img id="modalImage" src="" alt="Enlarged Image">
-        </div>
-    </div>
 
     <!-- Swiper Slider -->
-    <div class="swiper">
+    <div class="swiper main-swiper">
         <div class="swiper-wrapper">
+
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide1.jpg" alt="প্রধান ভবন" class="slide-image"
-                    data-src="https://pgsc.edu.bd/admin/slide/slide1.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide1.jpg" alt="প্রধান ভবন"
+                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide1.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div
-                            class="inline-block bg-green-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
-                            <i class="fas fa-university mr-2"></i> প্রধান ভবন
+                        <span class="slide-badge">
+                            <i class="fas fa-university"></i> প্রধান ভবন
+                        </span>
+                        <h2 class="slide-title">আমাদের ঐতিহ্যবাহী প্রধান ভবন</h2>
+                        <p class="slide-desc">১৯৫০ সাল থেকে শিক্ষাদানের এই পবিত্র স্থান, যেখানে তৈরি হচ্ছে আগামী দিনের নারী নেতৃত্ব</p>
+                        <div class="slide-actions">
+                            <a href="#notice" class="slide-btn-primary">
+                                <i class="fas fa-info-circle"></i> বিস্তারিত জানুন
+                            </a>
+                            <a href="#gallery" class="slide-btn-secondary">
+                                <i class="fas fa-images"></i> গ্যালারি
+                            </a>
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4 solaiman-font">আমাদের ঐতিহ্যবাহী প্রধান ভবন
-                        </h2>
-                        <p class="text-xl opacity-90 mb-6 solaiman-font">১৯৫০ সাল থেকে শিক্ষাদানের এই পবিত্র স্থান,
-                            যেখানে তৈরি হচ্ছে আগামী দিনের নারী নেতৃত্ব</p>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide2.jpg" alt="লাইব্রেরি" class="slide-image"
-                    data-src="https://pgsc.edu.bd/admin/slide/slide2.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide2.jpg" alt="লাইব্রেরি"
+                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide2.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div
-                            class="inline-block bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
-                            <i class="fas fa-book mr-2"></i> ডিজিটাল লাইব্রেরি
+                        <span class="slide-badge" style="background:rgba(37,99,235,0.85)">
+                            <i class="fas fa-book"></i> ডিজিটাল লাইব্রেরি
+                        </span>
+                        <h2 class="slide-title">আধুনিক ডিজিটাল লাইব্রেরি</h2>
+                        <p class="slide-desc">২০,০০০+ বইয়ের সংগ্রহশালা ও ই-লাইব্রেরি সুবিধা, জ্ঞানের অপার সম্ভাবনা</p>
+                        <div class="slide-actions">
+                            <a href="#notice" class="slide-btn-primary">
+                                <i class="fas fa-info-circle"></i> বিস্তারিত জানুন
+                            </a>
+                            <a href="#gallery" class="slide-btn-secondary">
+                                <i class="fas fa-images"></i> গ্যালারি
+                            </a>
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4 solaiman-font">আধুনিক ডিজিটাল লাইব্রেরি</h2>
-                        <p class="text-xl opacity-90 mb-6 solaiman-font">২০,০০০+ বইয়ের সংগ্রহশালা ও ই-লাইব্রেরি
-                            সুবিধা, জ্ঞানের অপার সম্ভাবনা</p>
                     </div>
                 </div>
             </div>
 
             <!-- Slide 3 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide3.jpg" alt="বিজ্ঞান ল্যাব" class="slide-image"
-                    data-src="https://pgsc.edu.bd/admin/slide/slide3.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide3.jpg" alt="বিজ্ঞান ল্যাব"
+                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide3.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
-                        <div
-                            class="inline-block bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
-                            <i class="fas fa-flask mr-2"></i> বিজ্ঞান গবেষণাগার
+                        <span class="slide-badge" style="background:rgba(124,58,237,0.85)">
+                            <i class="fas fa-flask"></i> বিজ্ঞান গবেষণাগার
+                        </span>
+                        <h2 class="slide-title">আধুনিক বিজ্ঞান গবেষণাগার</h2>
+                        <p class="slide-desc">প্রযুক্তিগত শিক্ষার জন্য সজ্জিত বিজ্ঞান ল্যাব, হাতে-কলমে শিক্ষার সুযোগ</p>
+                        <div class="slide-actions">
+                            <a href="#notice" class="slide-btn-primary">
+                                <i class="fas fa-info-circle"></i> বিস্তারিত জানুন
+                            </a>
+                            <a href="#gallery" class="slide-btn-secondary">
+                                <i class="fas fa-images"></i> গ্যালারি
+                            </a>
                         </div>
-                        <h2 class="text-3xl md:text-5xl font-bold mb-4 solaiman-font">আধুনিক বিজ্ঞান গবেষণাগার</h2>
-                        <p class="text-xl opacity-90 mb-6 solaiman-font">প্রযুক্তিগত শিক্ষার জন্য সজ্জিত বিজ্ঞান
-                            ল্যাব, হাতে-কলমে শিক্ষার সুযোগ</p>
                     </div>
                 </div>
             </div>
+
         </div>
 
-        <!-- Navigation buttons -->
-        <div class="swiper-button-next !text-white !bg-green-600/80 hover:!bg-green-600"></div>
-        <div class="swiper-button-prev !text-white !bg-green-600/80 hover:!bg-green-600"></div>
+        <!-- Custom Nav Buttons -->
+        <button class="slide-nav slide-prev" aria-label="আগের স্লাইড">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slide-nav slide-next" aria-label="পরের স্লাইড">
+            <i class="fas fa-chevron-right"></i>
+        </button>
 
         <!-- Pagination -->
-        <div class="swiper-pagination !bottom-6"></div>
+        <div class="swiper-pagination slider-pagination"></div>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-counter">
+        <span id="slideCurrentNum">1</span>
+        <span class="counter-sep">/</span>
+        <span class="counter-total">3</span>
     </div>
 
     <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
-        <a href="#notice" class="text-white text-2xl">
-            <i class="fas fa-chevron-down bg-green-600/80 p-3 rounded-full backdrop-blur-sm"></i>
+    <div class="scroll-indicator">
+        <a href="#notice" aria-label="নিচে যান">
+            <span class="scroll-text">নিচে দেখুন</span>
+            <div class="scroll-icon">
+                <div class="scroll-dot"></div>
+            </div>
         </a>
     </div>
+
 </section>
+
+<!-- Image Modal -->
+
+<div class="image-modal" id="imageModal">
+    <div class="modal-content">
+        <span class="close-modal" id="closeModal">
+            <i class="fas fa-times"></i>
+        </span>
+        <img id="modalImage" src="" alt="Enlarged Image">
+    </div>
+</div>

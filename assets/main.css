@@ -233,15 +233,16 @@ body.menu-open {
     overflow: hidden;
 }
 
-/* ====== FULLSCREEN SLIDER WITHOUT ZOOM ====== */
+/* ====== FULLSCREEN SLIDER ====== */
 .fullscreen-slider {
     width: 100%;
-    height: 85vh;
+    height: 88vh;
+    min-height: 480px;
     position: relative;
-    margin-top: -20px;
+    overflow: hidden;
 }
 
-.swiper {
+.main-swiper {
     width: 100%;
     height: 100%;
 }
@@ -255,33 +256,304 @@ body.menu-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 8s ease;
 }
 
-/* FIXED: Slide text positioning and background */
+.swiper-slide-active img {
+    transform: scale(1.05);
+}
+
+/* ====== SLIDE OVERLAY ====== */
 .slide-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 40px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
-    color: white;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.42) 45%,
+            rgba(0, 0, 0, 0.04) 100%);
     display: flex;
     align-items: flex-end;
+    /* left padding বেশি — nav button থেকে দূরে */
+    padding: 60px 80px 100px 80px;
+    box-sizing: border-box;
 }
 
 .slide-content {
-    max-width: 800px;
-    text-align: left;
+    max-width: 680px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.slide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(13, 76, 23, 0.88);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 7px 18px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'SolaimanLipi', sans-serif;
+}
+
+.slide-title {
+    font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    font-family: 'SolaimanLipi', sans-serif;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.slide-desc {
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+    opacity: 0.88;
+    line-height: 1.65;
+    margin-bottom: 22px;
+    font-family: 'SolaimanLipi', sans-serif;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    max-width: 520px;
+}
+
+.slide-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.slide-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #0d4c17, #16a34a);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 76, 23, 0.45);
+    font-family: 'SolaimanLipi', sans-serif;
+    white-space: nowrap;
+}
+
+.slide-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(13, 76, 23, 0.55);
+}
+
+.slide-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 11px 22px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-family: 'SolaimanLipi', sans-serif;
+    white-space: nowrap;
+}
+
+.slide-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.26);
+    transform: translateY(-2px);
+}
+
+/* ====== NAV BUTTONS ====== */
+.slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    outline: none;
+    /* Swiper default buttons override */
+    margin-top: 0;
+}
+
+.slide-nav::after {
+    display: none;
+    /* Swiper default arrow hide */
+}
+
+.slide-prev {
+    left: 18px;
+}
+
+.slide-next {
+    right: 18px;
+}
+
+.slide-nav:hover {
+    background: rgba(13, 76, 23, 0.88);
+    border-color: rgba(34, 197, 94, 0.5);
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ====== PAGINATION — bottom এ আলাদা থাকবে ====== */
+.slider-pagination {
+    position: absolute !important;
+    bottom: 56px !important;
+    /* scroll indicator এর উপরে */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 15 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: auto !important;
+}
+
+.slider-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+    margin: 0 !important;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.slider-pagination .swiper-pagination-bullet-active {
+    width: 26px;
+    background: #22c55e;
+}
+
+/* ====== SLIDE COUNTER ====== */
+.slide-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.38);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    pointer-events: none;
+}
+
+#slideCurrentNum {
+    color: #4ade80;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.counter-sep {
+    opacity: 0.45;
+    margin: 0 3px;
+}
+
+.counter-total {
+    opacity: 0.7;
+}
+
+/* ====== SCROLL INDICATOR — একদম নিচে ====== */
+.scroll-indicator {
+    position: absolute;
+    bottom: 12px;
+    /* pagination এর নিচে */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    pointer-events: auto;
+}
+
+.scroll-indicator a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.scroll-text {
+    font-size: 10px;
+    font-family: 'SolaimanLipi', sans-serif;
+    opacity: 0.65;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.scroll-icon {
+    width: 22px;
+    height: 36px;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.scroll-indicator a:hover .scroll-icon {
+    border-color: #4ade80;
+}
+
+.scroll-dot {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: scrollBounce 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollBounce {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(10px);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* ====== IMAGE MODAL ====== */
 .image-modal {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.95);
     display: flex;
     justify-content: center;
@@ -289,7 +561,7 @@ body.menu-open {
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .image-modal.active {
@@ -298,40 +570,140 @@ body.menu-open {
 }
 
 .modal-content {
-    max-width: 90%;
-    max-height: 90%;
     position: relative;
+    max-width: 92vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-content img {
     max-width: 100%;
-    max-height: 80vh;
+    max-height: 85vh;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    display: block;
 }
 
 .close-modal {
     position: absolute;
-    top: -40px;
+    top: -44px;
     right: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 18px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .close-modal:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(239, 68, 68, 0.7);
     transform: rotate(90deg);
+    border-color: transparent;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 1024px) {
+    .slide-overlay {
+        padding: 40px 70px 100px 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fullscreen-slider {
+        height: 75vh;
+        min-height: 420px;
+    }
+
+    .slide-overlay {
+        padding: 20px 20px 95px 20px;
+    }
+
+    .slide-badge {
+        font-size: 11px;
+        padding: 5px 13px;
+        margin-bottom: 10px;
+    }
+
+    .slide-btn-primary,
+    .slide-btn-secondary {
+        padding: 10px 17px;
+        font-size: 12px;
+    }
+
+    .slide-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .slide-prev {
+        left: 10px;
+    }
+
+    .slide-next {
+        right: 10px;
+    }
+
+    .slide-counter {
+        top: 12px;
+        right: 12px;
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .slider-pagination {
+        bottom: 52px !important;
+    }
+
+    .scroll-indicator {
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fullscreen-slider {
+        height: 62vh;
+        min-height: 360px;
+    }
+
+    .slide-overlay {
+        padding: 14px 14px 90px 14px;
+    }
+
+    /* Mobile এ nav button hide, swipe দিয়ে কাজ হবে */
+    .slide-nav {
+        display: none;
+    }
+
+    .slide-btn-secondary {
+        display: none;
+    }
+
+    .slide-desc {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .scroll-text {
+        display: none;
+    }
+
+    .slider-pagination {
+        bottom: 46px !important;
+    }
 }
 
 /* ====== BACK TO TOP WITH PROGRESS (NO ARROW) ====== */

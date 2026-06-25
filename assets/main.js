@@ -57,41 +57,36 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateBulletin, 5000);
 });
 
-
 // ====== SWIPER SLIDER ======
-const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
+const mainSwiper = new Swiper('.main-swiper', {
     loop: true,
-    speed: 1000,
+    speed: 900,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
     effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-
+    fadeEffect: { crossFade: true },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.slider-pagination',
         clickable: true,
-        dynamicBullets: true,
     },
-
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.slide-next',
+        prevEl: '.slide-prev',
     },
-
-    keyboard: {
-        enabled: true,
-    },
-
-    mousewheel: {
-        forceToAxis: true,
+    keyboard: { enabled: true },
+    on: {
+        slideChange: function () {
+            const el = document.getElementById('slideCurrentNum');
+            if (el) el.textContent = this.realIndex + 1;
+        }
     }
 });
+
+
+
 
 // ====== TV BULLETIN ANIMATION ======
 const bulletinItems = document.querySelectorAll('.bulletin-item');
@@ -152,49 +147,54 @@ videoTab.addEventListener('click', () => {
 });
 
 // ====== IMAGE MODAL ======
-const imageModal = document.getElementById('imageModal');
-const modalImage = document.getElementById('modalImage');
-const closeModal = document.getElementById('closeModal');
-const slideImages = document.querySelectorAll('.slide-image');
+// ====== IMAGE MODAL ======
+const imageModal  = document.getElementById('imageModal');
+const modalImage  = document.getElementById('modalImage');
+const closeModal  = document.getElementById('closeModal');
 const galleryItems = document.querySelectorAll('.gallery-item');
 
 function openModal(imgSrc) {
+    if (!imgSrc) return;
     modalImage.src = imgSrc;
     imageModal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-slideImages.forEach(img => {
-    img.addEventListener('click', function () {
-        openModal(this.dataset.src);
-    });
-});
-
-galleryItems.forEach(item => {
-    item.addEventListener('click', function () {
-        const imgSrc = this.querySelector('img').src;
-        openModal(imgSrc);
-    });
-});
-
-closeModal.addEventListener('click', () => {
+function closeModalFn() {
     imageModal.classList.remove('active');
     document.body.style.overflow = 'auto';
+    setTimeout(() => { modalImage.src = ''; }, 300);
+}
+
+// Slide images — click এ modal open
+// Swiper drag conflict এড়াতে pointerup ব্যবহার করছি
+let pointerMoved = false;
+
+document.querySelectorAll('.swiper-slide').forEach(slide => {
+    slide.addEventListener('pointerdown', () => { pointerMoved = false; });
+    slide.addEventListener('pointermove', () => { pointerMoved = true; });
+    slide.addEventListener('pointerup', function (e) {
+        if (pointerMoved) return; // drag হলে modal খুলবে না
+        const img = this.querySelector('.slide-image');
+        if (img) openModal(img.dataset.src || img.src);
+    });
 });
 
-imageModal.addEventListener('click', (e) => {
-    if (e.target === imageModal) {
-        imageModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
+// Gallery items
+galleryItems.forEach(item => {
+    item.addEventListener('click', function () {
+        const img = this.querySelector('img');
+        if (img) openModal(img.src);
+    });
 });
 
-// Close modal with ESC key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && imageModal.classList.contains('active')) {
-        imageModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
+// Close handlers
+closeModal.addEventListener('click', closeModalFn);
+imageModal.addEventListener('click', e => {
+    if (e.target === imageModal) closeModalFn();
+});
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && imageModal.classList.contains('active')) closeModalFn();
 });
 
 // ====== BACK TO TOP WITH PROGRESS (NO ARROW) ======
