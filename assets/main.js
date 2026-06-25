@@ -1,7 +1,27 @@
-// ====== MOBILE MENU FIX ======
+// ====== MOBILE MENU ======
 const mobileMenuButton = document.getElementById('mobileMenuButton');
 const closeMobileMenu = document.getElementById('closeMobileMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileOverlay = document.getElementById('mobileMenuOverlay');
 const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+function openMenu() {
+    mobileMenu.classList.add('active');
+    mobileOverlay.classList.add('active');
+    document.body.classList.add('menu-open');
+}
+
+function closeMenu() {
+    mobileMenu.classList.remove('active');
+    mobileOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
+
+mobileMenuButton.addEventListener('click', openMenu);
+closeMobileMenu.addEventListener('click', closeMenu);
+mobileOverlay.addEventListener('click', closeMenu);
+mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -37,32 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateBulletin, 5000);
 });
 
-
-mobileMenuButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.add('active');
-    document.body.style.overflow = 'hidden';
-});
-
-closeMobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-});
 
 // ====== SWIPER SLIDER ======
 const swiper = new Swiper('.swiper', {
