@@ -1,4 +1,4 @@
-<div class="tv-bulletin">
+<div class="tv-bulletin mt-1">
     <div class="bulletin-left z-10">
         <i class="fas fa-bolt text-yellow-300 text-xl animate-pulse"></i>
     </div>

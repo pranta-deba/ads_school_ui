@@ -1,4 +1,4 @@
-<div class="bg-gradient-to-r from-green-900 to-emerald-900 text-white relative z-40">
+<div class="hidden md:block bg-gradient-to-r from-green-900 to-emerald-900 text-white relative z-40">
     <div class="container mx-auto px-4 md:px-6">
         <div class="flex items-center justify-between py-2 gap-2">
 
