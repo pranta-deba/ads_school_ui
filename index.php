@@ -32,7 +32,7 @@
     <!-- Header & Navigation -->
     <?php include 'includes/header_and_navigation.php'; ?>
 
-    <!-- TV Bulletin Style Breaking News - FIXED -->
+    <!-- TV Bulletin Style Breaking News -->
     <?php include 'includes/bulletin_style_breaking_news.php'; ?>
 
     <!-- Yellow Breaking News Marquee - Bottom Fixed -->

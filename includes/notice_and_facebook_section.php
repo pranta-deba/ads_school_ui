@@ -1,324 +1,281 @@
- <section id="notice" class="section-container bg-gray-50">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<section id="notice" class="py-12 md:py-16" style="background: var(--bg-section, #f8fafc);">
+    <div class="container mx-auto px-4 md:px-6 max-w-7xl">
+        <div class="ns-main-grid">
+
+            <!-- ======= LEFT COLUMN ======= -->
+            <div class="ns-left-col">
+
                 <!-- Notice Board -->
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 mb-8">
-                        <div class="bg-gradient-to-r from-green-700 to-emerald-800 px-6 py-5">
-                            <h3 class="text-2xl font-bold text-white flex items-center gap-3 solaiman-font">
-                                <i class="fas fa-bullhorn text-yellow-300"></i>
-                                নোটিশ বোর্ড
-                            </h3>
-                        </div>
-                        <div class="p-6">
-                            <div class="space-y-6">
-                                <!-- Notice 1 -->
-                                <div
-                                    class="group cursor-pointer p-4 bg-green-50 rounded-xl hover:bg-green-100 transition duration-300">
-                                    <div class="flex gap-4">
-                                        <div
-                                            class="bg-white text-green-800 p-3 rounded-lg text-center shadow-sm min-w-[70px]">
-                                            <div class="text-lg font-bold">১০</div>
-                                            <div class="text-xs solaiman-font">জানুয়ারি</div>
-                                        </div>
-                                        <div>
-                                            <a href="#"
-                                                class="font-semibold text-gray-800 hover:text-green-700 transition block mb-1 solaiman-font">
-                                                ষষ্ঠ থেকে নবম শ্রেণিতে ভর্তি ফি জমা প্রদান প্রসঙ্গে
-                                            </a>
-                                            <p class="text-sm text-gray-600 solaiman-font">শেষ তারিখ: ২০ জানুয়ারি ২০২৬
-                                            </p>
-                                            <span
-                                                class="inline-block mt-2 text-xs bg-red-100 text-red-800 px-3 py-1 rounded-full solaiman-font">
-                                                <i class="fas fa-exclamation-circle mr-1"></i> জরুরি
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Notice 2 -->
-                                <div
-                                    class="group cursor-pointer p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition duration-300">
-                                    <div class="flex gap-4">
-                                        <div
-                                            class="bg-white text-blue-800 p-3 rounded-lg text-center shadow-sm min-w-[70px]">
-                                            <div class="text-lg font-bold">০৫</div>
-                                            <div class="text-xs solaiman-font">জানুয়ারি</div>
-                                        </div>
-                                        <div>
-                                            <a href="#"
-                                                class="font-semibold text-gray-800 hover:text-blue-700 transition block mb-1 solaiman-font">
-                                                বার্ষিক পরীক্ষার ফলাফলের মেধাতালিকা প্রকাশ
-                                            </a>
-                                            <p class="text-sm text-gray-600 solaiman-font">নবম শ্রেণির বার্ষিক পরীক্ষার
-                                                ফলাফল</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Notice 3 -->
-                                <div
-                                    class="group cursor-pointer p-4 bg-orange-50 rounded-xl hover:bg-orange-100 transition duration-300">
-                                    <div class="flex gap-4">
-                                        <div
-                                            class="bg-white text-orange-800 p-3 rounded-lg text-center shadow-sm min-w-[70px]">
-                                            <div class="text-lg font-bold">১৫</div>
-                                            <div class="text-xs solaiman-font">জানুয়ারি</div>
-                                        </div>
-                                        <div>
-                                            <a href="#"
-                                                class="font-semibold text-gray-800 hover:text-orange-700 transition block mb-1 solaiman-font">
-                                                বার্ষিক ক্রীড়া প্রতিযোগিতা সম্পর্কিত
-                                            </a>
-                                            <p class="text-sm text-gray-600 solaiman-font">২০ জানুয়ারি সকাল ৯টায় শুরু
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Notice 4 -->
-                                <div
-                                    class="group cursor-pointer p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition duration-300">
-                                    <div class="flex gap-4">
-                                        <div
-                                            class="bg-white text-purple-800 p-3 rounded-lg text-center shadow-sm min-w-[70px]">
-                                            <div class="text-lg font-bold">২০</div>
-                                            <div class="text-xs solaiman-font">জানুয়ারি</div>
-                                        </div>
-                                        <div>
-                                            <a href="#"
-                                                class="font-semibold text-gray-800 hover:text-purple-700 transition block mb-1 solaiman-font">
-                                                শিক্ষকদের মাসিক সভা
-                                            </a>
-                                            <p class="text-sm text-gray-600 solaiman-font">২৫ জানুয়ারি সকাল ১১টায়</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a href="#"
-                                class="block text-center mt-8 text-green-600 font-semibold hover:text-green-700 solaiman-font">
-                                <i class="fas fa-list mr-2"></i>সব নোটিশ দেখুন
-                            </a>
-                        </div>
+                <div class="ns-card">
+                    <div class="ns-card-header ns-header-green">
+                        <h3 class="solaiman-font">
+                            <i class="fas fa-bullhorn"></i>
+                            নোটিশ বোর্ড
+                        </h3>
+                        <a href="#" class="ns-header-link solaiman-font">
+                            সব নোটিশ <i class="fas fa-arrow-right" style="font-size:11px;"></i>
+                        </a>
                     </div>
+                    <div class="ns-card-body">
+                        <ul class="ns-notice-list">
 
-                    <!-- Facebook Posts Section -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                        <div class="bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-5">
-                            <div class="flex justify-between items-center">
-                                <h3 class="text-2xl font-bold text-white flex items-center gap-3 solaiman-font">
-                                    <i class="fab fa-facebook-square"></i>
-                                    ফেইসবুক আপডেট
-                                </h3>
-                                <a href="https://facebook.com/pgsc.edu.bd" target="_blank"
-                                    class="text-white hover:text-yellow-300 text-sm">
-                                    <i class="fas fa-external-link-alt mr-1"></i> পেজে যান
-                                </a>
+                            <!-- Notice 1 -->
+                            <li class="ns-notice-item">
+                                <div class="ns-date-box ns-date-green">
+                                    <span class="ns-date-day solaiman-font">১০</span>
+                                    <span class="ns-date-month solaiman-font">জানুয়ারি</span>
+                                </div>
+                                <div class="ns-notice-info">
+                                    <a href="#" class="ns-notice-title solaiman-font">
+                                        ষষ্ঠ থেকে নবম শ্রেণিতে ভর্তি ফি জমা প্রদান প্রসঙ্গে
+                                    </a>
+                                    <span class="ns-notice-sub solaiman-font">শেষ তারিখ: ২০ জানুয়ারি ২০২৬</span>
+                                    <span class="ns-badge-urgent solaiman-font">
+                                        <i class="fas fa-exclamation-circle"></i> জরুরি
+                                    </span>
+                                </div>
+                            </li>
+
+                            <!-- Notice 2 -->
+                            <li class="ns-notice-item">
+                                <div class="ns-date-box ns-date-blue">
+                                    <span class="ns-date-day solaiman-font">০৫</span>
+                                    <span class="ns-date-month solaiman-font">জানুয়ারি</span>
+                                </div>
+                                <div class="ns-notice-info">
+                                    <a href="#" class="ns-notice-title solaiman-font">
+                                        বার্ষিক পরীক্ষার ফলাফলের মেধাতালিকা প্রকাশ
+                                    </a>
+                                    <span class="ns-notice-sub solaiman-font">নবম শ্রেণির বার্ষিক পরীক্ষার ফলাফল</span>
+                                </div>
+                            </li>
+
+                            <!-- Notice 3 -->
+                            <li class="ns-notice-item">
+                                <div class="ns-date-box ns-date-orange">
+                                    <span class="ns-date-day solaiman-font">১৫</span>
+                                    <span class="ns-date-month solaiman-font">জানুয়ারি</span>
+                                </div>
+                                <div class="ns-notice-info">
+                                    <a href="#" class="ns-notice-title solaiman-font">
+                                        বার্ষিক ক্রীড়া প্রতিযোগিতা সম্পর্কিত
+                                    </a>
+                                    <span class="ns-notice-sub solaiman-font">২০ জানুয়ারি সকাল ৯টায় শুরু</span>
+                                </div>
+                            </li>
+
+                            <!-- Notice 4 -->
+                            <li class="ns-notice-item">
+                                <div class="ns-date-box ns-date-purple">
+                                    <span class="ns-date-day solaiman-font">২০</span>
+                                    <span class="ns-date-month solaiman-font">জানুয়ারি</span>
+                                </div>
+                                <div class="ns-notice-info">
+                                    <a href="#" class="ns-notice-title solaiman-font">
+                                        শিক্ষকদের মাসিক সভা
+                                    </a>
+                                    <span class="ns-notice-sub solaiman-font">২৫ জানুয়ারি সকাল ১১টায়</span>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div><!-- /Notice Board -->
+
+                <!-- Facebook Posts -->
+                <div class="ns-card">
+                    <div class="ns-card-header ns-header-blue">
+                        <h3 class="solaiman-font">
+                            <i class="fab fa-facebook-square"></i>
+                            ফেইসবুক আপডেট
+                        </h3>
+                        <a href="https://facebook.com/pgsc.edu.bd" target="_blank" rel="noopener" class="ns-header-link solaiman-font">
+                            পেজে যান <i class="fas fa-external-link-alt" style="font-size:10px;"></i>
+                        </a>
+                    </div>
+                    <div class="ns-card-body">
+
+                        <!-- Post 1 -->
+                        <div class="ns-fb-post">
+                            <div class="ns-fb-head">
+                                <div class="ns-fb-avatar">PGSC</div>
+                                <div>
+                                    <div class="ns-fb-name solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড কলেজ</div>
+                                    <div class="ns-fb-time solaiman-font">২ ঘণ্টা আগে &middot; <i class="fas fa-globe-asia" style="font-size:10px;"></i></div>
+                                </div>
+                            </div>
+                            <p class="ns-fb-text solaiman-font">
+                                বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৬-এর জন্য প্রস্তুতি শুরু! আমাদের ছাত্রীদের অংশগ্রহণে এ বছরও সাফল্যের নতুন ইতিহাস রচিত হবে। #PGSC_Sports #AnnualSports
+                            </p>
+                            <img src="https://pgsc.edu.bd/admin/slide/slide4.jpg" alt="Annual Sports 2026" class="ns-fb-img" loading="lazy">
+                            <div class="ns-fb-stats">
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-like"><i class="fas fa-thumbs-up"></i></span> ২৩৪
+                                </span>
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-cmt"><i class="fas fa-comment"></i></span> ৪৫
+                                </span>
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-share"><i class="fas fa-share"></i></span> ১২
+                                </span>
                             </div>
                         </div>
-                        <div class="p-6">
-                            <!-- Facebook Post 1 -->
-                            <div class="facebook-post mb-6">
-                                <div class="post-header">
-                                    <div class="post-avatar">
-                                        PGSC
-                                    </div>
-                                    <div>
-                                        <div class="font-bold text-gray-800 solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড
-                                            কলেজ</div>
-                                        <div class="text-gray-500 text-sm">২ ঘণ্টা আগে · <i
-                                                class="fas fa-globe-asia"></i></div>
-                                    </div>
-                                </div>
-                                <div class="post-content">
-                                    <p class="text-gray-800 mb-4 solaiman-font">
-                                        🎉 বার্ষিক ক্রীড়া প্রতিযোগিতা ২০২৬-এর জন্য প্রস্তুতি শুরু!
-                                        আমাদের ছাত্রীদের অংশগ্রহণে এ বছরও সাফল্যের নতুন ইতিহাস রচিত হবে।
-                                        #PGSC_Sports #AnnualSports #PahartaliGirls
-                                    </p>
-                                    <img src="https://pgsc.edu.bd/admin/slide/slide4.jpg" alt="Sports"
-                                        class="w-full rounded-lg mb-4">
-                                </div>
-                                <div class="post-stats">
-                                    <span><i class="fas fa-thumbs-up text-blue-600"></i> ২৩৪</span>
-                                    <span><i class="fas fa-comment text-green-600"></i> ৪৫</span>
-                                    <span><i class="fas fa-share text-purple-600"></i> ১২</span>
-                                </div>
-                            </div>
 
-                            <!-- Facebook Post 2 -->
-                            <div class="facebook-post">
-                                <div class="post-header">
-                                    <div class="post-avatar">
-                                        PGSC
-                                    </div>
-                                    <div>
-                                        <div class="font-bold text-gray-800 solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড
-                                            কলেজ</div>
-                                        <div class="text-gray-500 text-sm">১ দিন আগে · <i class="fas fa-globe-asia"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="post-content">
-                                    <p class="text-gray-800 mb-4 solaiman-font">
-                                        📚 নতুন একাডেমিক বছরে স্বাগতম!
-                                        স্মার্ট ক্লাসরুম ও ডিজিটাল ল্যাব সুবিধা সম্প্রসারণ করা হয়েছে।
-                                        শিক্ষার্থীদের জন্য আধুনিক শিক্ষার সকল সুযোগ তৈরি করা হয়েছে।
-                                    </p>
-                                    <div class="flex gap-2">
-                                        <span
-                                            class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm solaiman-font">#শিক্ষা</span>
-                                        <span
-                                            class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm solaiman-font">#প্রযুক্তি</span>
-                                        <span
-                                            class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm solaiman-font">#আধুনিকতা</span>
-                                    </div>
-                                </div>
-                                <div class="post-stats">
-                                    <span><i class="fas fa-thumbs-up text-blue-600"></i> ৩৪৫</span>
-                                    <span><i class="fas fa-comment text-green-600"></i> ৬৭</span>
-                                    <span><i class="fas fa-share text-purple-600"></i> ২৩</span>
+                        <!-- Post 2 -->
+                        <div class="ns-fb-post ns-fb-post-last">
+                            <div class="ns-fb-head">
+                                <div class="ns-fb-avatar">PGSC</div>
+                                <div>
+                                    <div class="ns-fb-name solaiman-font">পাহাড়তলী গার্লস স্কুল এন্ড কলেজ</div>
+                                    <div class="ns-fb-time solaiman-font">১ দিন আগে &middot; <i class="fas fa-globe-asia" style="font-size:10px;"></i></div>
                                 </div>
                             </div>
+                            <p class="ns-fb-text solaiman-font">
+                                নতুন একাডেমিক বছরে স্বাগতম! স্মার্ট ক্লাসরুম ও ডিজিটাল ল্যাব সুবিধা সম্প্রসারণ করা হয়েছে। শিক্ষার্থীদের জন্য আধুনিক শিক্ষার সকল সুযোগ তৈরি করা হয়েছে।
+                            </p>
+                            <div class="ns-fb-tags">
+                                <span class="ns-tag ns-tag-green solaiman-font">#শিক্ষা</span>
+                                <span class="ns-tag ns-tag-blue solaiman-font">#প্রযুক্তি</span>
+                                <span class="ns-tag ns-tag-purple solaiman-font">#আধুনিকতা</span>
+                            </div>
+                            <div class="ns-fb-stats">
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-like"><i class="fas fa-thumbs-up"></i></span> ৩৪৫
+                                </span>
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-cmt"><i class="fas fa-comment"></i></span> ৬৭
+                                </span>
+                                <span class="ns-fb-stat">
+                                    <span class="ns-stat-icon ns-stat-share"><i class="fas fa-share"></i></span> ২৩
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- /Facebook Posts -->
+
+            </div><!-- /LEFT COLUMN -->
+
+
+            <!-- ======= RIGHT COLUMN ======= -->
+            <div class="ns-right-col">
+
+                <!-- Quick Services -->
+                <div class="ns-card">
+                    <div style="padding: 18px 22px 8px;">
+                        <h3 class="ns-col-title solaiman-font">
+                            <span class="ns-col-title-bar"></span>
+                            দ্রুত সেবা
+                        </h3>
+                    </div>
+                    <div class="ns-services-list">
+                        <a href="#" class="ns-service-item">
+                            <span class="ns-svc-icon ns-svc-green"><i class="fas fa-user-graduate"></i></span>
+                            <div>
+                                <div class="ns-svc-label solaiman-font">শিক্ষার্থী তথ্য</div>
+                                <div class="ns-svc-sub solaiman-font">আইডি কার্ড ও প্রোফাইল</div>
+                            </div>
+                            <i class="fas fa-chevron-right ns-svc-arrow"></i>
+                        </a>
+                        <a href="#" class="ns-service-item">
+                            <span class="ns-svc-icon ns-svc-blue"><i class="fas fa-credit-card"></i></span>
+                            <div>
+                                <div class="ns-svc-label solaiman-font">অনলাইন পেমেন্ট</div>
+                                <div class="ns-svc-sub solaiman-font">বেতন ও ফি প্রদান</div>
+                            </div>
+                            <i class="fas fa-chevron-right ns-svc-arrow"></i>
+                        </a>
+                        <a href="#" class="ns-service-item">
+                            <span class="ns-svc-icon ns-svc-orange"><i class="fas fa-poll"></i></span>
+                            <div>
+                                <div class="ns-svc-label solaiman-font">ফলাফল</div>
+                                <div class="ns-svc-sub solaiman-font">পরীক্ষার মার্কশিট</div>
+                            </div>
+                            <i class="fas fa-chevron-right ns-svc-arrow"></i>
+                        </a>
+                        <a href="#" class="ns-service-item ns-service-last">
+                            <span class="ns-svc-icon ns-svc-purple"><i class="fas fa-book-open"></i></span>
+                            <div>
+                                <div class="ns-svc-label solaiman-font">ডিজিটাল কন্টেন্ট</div>
+                                <div class="ns-svc-sub solaiman-font">সিলেবাস ও লেকচার শিট</div>
+                            </div>
+                            <i class="fas fa-chevron-right ns-svc-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Today's Statistics -->
+                <div class="ns-stats-card">
+                    <h3 class="ns-stats-title solaiman-font">আজকের পরিসংখ্যান</h3>
+                    <div>
+                        <div class="ns-stat-row">
+                            <div>
+                                <div class="ns-stat-label solaiman-font">মোট উপস্থিতি</div>
+                                <div class="ns-stat-val">৯৫%</div>
+                            </div>
+                            <div class="ns-stat-icon-box"><i class="fas fa-user-check"></i></div>
+                        </div>
+                        <div class="ns-stat-row">
+                            <div>
+                                <div class="ns-stat-label solaiman-font">শিক্ষার্থী সংখ্যা</div>
+                                <div class="ns-stat-val">১,২৫০</div>
+                            </div>
+                            <div class="ns-stat-icon-box"><i class="fas fa-users"></i></div>
+                        </div>
+                        <div class="ns-stat-row ns-stat-row-last">
+                            <div>
+                                <div class="ns-stat-label solaiman-font">শিক্ষক সংখ্যা</div>
+                                <div class="ns-stat-val">৫৮</div>
+                            </div>
+                            <div class="ns-stat-icon-box"><i class="fas fa-chalkboard-teacher"></i></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Quick Services & Stats -->
-                <div class="space-y-8">
-                    <!-- Quick Services -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6 solaiman-font">দ্রুত সেবা</h3>
-                        <div class="space-y-4">
-                            <a href="#"
-                                class="flex items-center gap-4 p-4 bg-green-50 hover:bg-green-100 rounded-lg transition duration-300">
-                                <div class="p-3 bg-green-100 rounded-lg">
-                                    <i class="fas fa-user-graduate text-green-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">শিক্ষার্থী তথ্য</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">আইডি কার্ড ও প্রোফাইল</div>
-                                </div>
-                            </a>
-
-                            <a href="#"
-                                class="flex items-center gap-4 p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition duration-300">
-                                <div class="p-3 bg-blue-100 rounded-lg">
-                                    <i class="fas fa-credit-card text-blue-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">অনলাইন পেমেন্ট</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">বেতন ও ফি প্রদান</div>
-                                </div>
-                            </a>
-
-                            <a href="#"
-                                class="flex items-center gap-4 p-4 bg-orange-50 hover:bg-orange-100 rounded-lg transition duration-300">
-                                <div class="p-3 bg-orange-100 rounded-lg">
-                                    <i class="fas fa-poll text-orange-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">ফলাফল</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">পরীক্ষার মার্কশিট</div>
-                                </div>
-                            </a>
-
-                            <a href="#"
-                                class="flex items-center gap-4 p-4 bg-purple-50 hover:bg-purple-100 rounded-lg transition duration-300">
-                                <div class="p-3 bg-purple-100 rounded-lg">
-                                    <i class="fas fa-book-open text-purple-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">ডিজিটাল কন্টেন্ট</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">সিলেবাস ও লেকচার শিট</div>
-                                </div>
-                            </a>
-                        </div>
+                <!-- Important Dates -->
+                <div class="ns-card">
+                    <div style="padding: 18px 22px 8px;">
+                        <h3 class="ns-col-title solaiman-font">
+                            <span class="ns-col-title-bar"></span>
+                            গুরুত্বপূর্ণ তারিখ
+                        </h3>
                     </div>
-
-                    <!-- Today's Statistics -->
-                    <div class="bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl p-6 text-white">
-                        <h3 class="text-xl font-bold mb-6 solaiman-font">আজকের পরিসংখ্যান</h3>
-                        <div class="space-y-6">
-                            <div class="flex justify-between items-center">
+                    <div style="padding: 4px 22px 18px;">
+                        <ul class="ns-dates-list">
+                            <li class="ns-date-item">
+                                <span class="ns-di-icon ns-di-red"><i class="fas fa-calendar-day"></i></span>
                                 <div>
-                                    <div class="text-sm opacity-80 solaiman-font">মোট উপস্থিতি</div>
-                                    <div class="text-2xl font-bold">৯৫%</div>
+                                    <div class="ns-di-date solaiman-font">২০ জানুয়ারি</div>
+                                    <div class="ns-di-event solaiman-font">বার্ষিক ক্রীড়া</div>
                                 </div>
-                                <div class="p-3 bg-white/20 rounded-lg">
-                                    <i class="fas fa-user-check text-xl"></i>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between items-center">
+                            </li>
+                            <li class="ns-date-item">
+                                <span class="ns-di-icon ns-di-green"><i class="fas fa-calendar-day"></i></span>
                                 <div>
-                                    <div class="text-sm opacity-80 solaiman-font">শিক্ষার্থী সংখ্যা</div>
-                                    <div class="text-2xl font-bold">১,২৫০</div>
+                                    <div class="ns-di-date solaiman-font">২৫ জানুয়ারি</div>
+                                    <div class="ns-di-event solaiman-font">শিক্ষকদের সভা</div>
                                 </div>
-                                <div class="p-3 bg-white/20 rounded-lg">
-                                    <i class="fas fa-users text-xl"></i>
-                                </div>
-                            </div>
-
-                            <div class="flex justify-between items-center">
+                            </li>
+                            <li class="ns-date-item">
+                                <span class="ns-di-icon ns-di-blue"><i class="fas fa-calendar-day"></i></span>
                                 <div>
-                                    <div class="text-sm opacity-80 solaiman-font">শিক্ষক সংখ্যা</div>
-                                    <div class="text-2xl font-bold">৫৮</div>
+                                    <div class="ns-di-date solaiman-font">৩০ জানুয়ারি</div>
+                                    <div class="ns-di-event solaiman-font">ভর্তির শেষ তারিখ</div>
                                 </div>
-                                <div class="p-3 bg-white/20 rounded-lg">
-                                    <i class="fas fa-chalkboard-teacher text-xl"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Important Dates -->
-                    <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6 solaiman-font">গুরুত্বপূর্ণ তারিখ</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-red-100 rounded-lg">
-                                    <i class="fas fa-calendar-day text-red-600"></i>
-                                </div>
+                            </li>
+                            <li class="ns-date-item ns-date-item-last">
+                                <span class="ns-di-icon ns-di-purple"><i class="fas fa-calendar-day"></i></span>
                                 <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">২০ জানুয়ারি</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">বার্ষিক ক্রীড়া</div>
+                                    <div class="ns-di-date solaiman-font">১৫ ফেব্রুয়ারি</div>
+                                    <div class="ns-di-event solaiman-font">মধ্যবর্তী পরীক্ষা</div>
                                 </div>
-                            </div>
-
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-green-100 rounded-lg">
-                                    <i class="fas fa-calendar-day text-green-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">২৫ জানুয়ারি</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">শিক্ষকদের সভা</div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-blue-100 rounded-lg">
-                                    <i class="fas fa-calendar-day text-blue-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">৩০ জানুয়ারি</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">ভর্তির শেষ তারিখ</div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-3">
-                                <div class="p-2 bg-purple-100 rounded-lg">
-                                    <i class="fas fa-calendar-day text-purple-600"></i>
-                                </div>
-                                <div>
-                                    <div class="font-semibold text-gray-800 solaiman-font">১৫ ফেব্রুয়ারি</div>
-                                    <div class="text-sm text-gray-600 solaiman-font">মধ্যবর্তী পরীক্ষা</div>
-                                </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+
+            </div><!-- /RIGHT COLUMN -->
+
+        </div><!-- /ns-main-grid -->
+    </div>
+</section>
