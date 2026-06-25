@@ -484,7 +484,7 @@ body.menu-open {
 /* ====== SCROLL INDICATOR — একদম নিচে ====== */
 .scroll-indicator {
     position: absolute;
-    bottom: 12px;
+    bottom: 80px;
     /* pagination এর নিচে */
     left: 50%;
     transform: translateX(-50%);
@@ -667,7 +667,8 @@ body.menu-open {
     }
 
     .scroll-indicator {
-        bottom: 10px;
+        bottom: -7px;
+        margin-bottom: 10px;
     }
 }
 

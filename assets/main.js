@@ -442,20 +442,7 @@ if (contactForm) {
     });
 }
 
-// ====== BACK TO TOP FROM OLD PAGE ======
-const backToTopOld = document.getElementById('backToTopOld');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopOld.classList.remove('hidden');
-    } else {
-        backToTopOld.classList.add('hidden');
-    }
-});
-
-backToTopOld.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
 
 // ====== GLOW EFFECT ON SERVICE CARDS ======
 const cards = document.querySelectorAll('.glow-effect');

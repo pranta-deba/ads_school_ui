@@ -6,15 +6,16 @@
 
             <!-- Slide 1 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide1.jpg" alt="প্রধান ভবন"
-                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide1.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide1.jpg" alt="প্রধান ভবন" class="slide-image"
+                    data-src="https://pgsc.edu.bd/admin/slide/slide1.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <span class="slide-badge">
                             <i class="fas fa-university"></i> প্রধান ভবন
                         </span>
                         <h2 class="slide-title">আমাদের ঐতিহ্যবাহী প্রধান ভবন</h2>
-                        <p class="slide-desc">১৯৫০ সাল থেকে শিক্ষাদানের এই পবিত্র স্থান, যেখানে তৈরি হচ্ছে আগামী দিনের নারী নেতৃত্ব</p>
+                        <p class="slide-desc">১৯৫০ সাল থেকে শিক্ষাদানের এই পবিত্র স্থান, যেখানে তৈরি হচ্ছে আগামী দিনের
+                            নারী নেতৃত্ব</p>
                         <div class="slide-actions">
                             <a href="#notice" class="slide-btn-primary">
                                 <i class="fas fa-info-circle"></i> বিস্তারিত জানুন
@@ -29,8 +30,8 @@
 
             <!-- Slide 2 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide2.jpg" alt="লাইব্রেরি"
-                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide2.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide2.jpg" alt="লাইব্রেরি" class="slide-image"
+                    data-src="https://pgsc.edu.bd/admin/slide/slide2.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <span class="slide-badge" style="background:rgba(37,99,235,0.85)">
@@ -52,8 +53,8 @@
 
             <!-- Slide 3 -->
             <div class="swiper-slide">
-                <img src="https://pgsc.edu.bd/admin/slide/slide3.jpg" alt="বিজ্ঞান ল্যাব"
-                    class="slide-image" data-src="https://pgsc.edu.bd/admin/slide/slide3.jpg">
+                <img src="https://pgsc.edu.bd/admin/slide/slide3.jpg" alt="বিজ্ঞান ল্যাব" class="slide-image"
+                    data-src="https://pgsc.edu.bd/admin/slide/slide3.jpg">
                 <div class="slide-overlay">
                     <div class="slide-content">
                         <span class="slide-badge" style="background:rgba(124,58,237,0.85)">
