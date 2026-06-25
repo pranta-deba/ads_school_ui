@@ -5,7 +5,7 @@
     <div class="loading-bg-effect"></div>
 
     <!-- Spinner with Percentage -->
-    <div class="spinner"></div>
+    <div class="spinner mt-[65px] md:mt-[90px]"></div>
     <div class="loading-percentage" id="loadingPercentage">0%</div>
 
     <!-- Text Content -->
