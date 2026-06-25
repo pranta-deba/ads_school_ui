@@ -14,10 +14,10 @@
                 </div>
                 <div class="min-w-0">
                     <h1
-                        class="text-base sm:text-lg  lg:text-2xl  font-bold text-green-900 leading-tight school-name-font">
+                        class="block sm:hidden md:hidden lg:hidden xl:block text-base sm:text-lg  lg:text-2xl  font-bold text-green-900 leading-tight school-name-font">
                         পাহাড়তলী গার্লস স্কুল এন্ড কলেজ
                     </h1>
-                    <p class="text-xs text-gray-500 hidden sm:block mt-0.5">
+                    <p class="block sm:hidden md:hidden lg:hidden xl:block text-xs text-gray-500  mt-0.5">
                         <i class="fas fa-map-marker-alt text-green-600 mr-1"></i>
                         পাহাড়তলী, আকবরশাহ, চট্টগ্রাম
                     </p>
